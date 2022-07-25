@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+:root {
+--font-family: 'Space Mono', monospace;
+--default-font-weight: 700;
+--default-font-size: 1.5rem;
+--very-dark-cyan: hsl(183, 100%, 15%);
+--dark-grayish-cyan: hsl(186, 14%, 43%);
+--grayish-cyan: hsl(184, 14%, 56%);
+--light-grayish-cyan: hsl(185, 41%, 84%);
+--very-light-grayish-cyan: hsl(189, 41%, 97%);
+--color-white: hsl(0, 0%, 100%);
+--primary-strong-cyan: hsl(172, 67%, 45%);
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--default-font-size);
+}
+p {
+    font-size: 1.063rem;
+    font-weight: var(--default-font-weight);
+    color: var(--grayish-cyan);
+    margin-bottom: 0.8rem;
+}
+.attribution { font-size: 0.68rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* START OF TIP CALCULATOR CODE */
+.tipCalculator {
+    background-color: var(--light-grayish-cyan);
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+    font-weight: var(--default-font-weight);
+    text-align: center;
+    position: absolute;
+    margin: -7.5rem 0 0 31.25rem;
+
+}
+
+.tipCalculatorBoxHolder {
+    border-radius: 1.25rem;
+    background-color: var(--color-white);
+    width: 60.62rem;
+    height: 33.43rem;
+    margin-top: 1.25;
+    padding: 0.62rem;
+}
+/*START OF CALCULATED AMOUNT HOLDER CODE*/
+.calculatedAmountHolder {
+    width: 28.75rem;
+    height: 28.75rem;
+    border-radius: 1.25rem;
+    background-color: var(--very-dark-cyan);
+    position: absolute;
+    display: inline-block;
+    margin: 0.93rem -0 0 0;
+    padding: 3.12rem 0 0 2.188rem;
+}
+.calculatedAmountHolder p {
+    color: var(--color-white);
+}
+.calculatedAmountHolder .person {
+    opacity: .5;
+}
+.tipAmountHolder {
+    width: 6.25rem;
+    height: 3.125rem;
+    position: absolute;
+    right: 7.5rem;
+    top: 3.125rem;
+    color: var(--primary-strong-cyan);
+}
+.totalAmountHolder {
+    width: 6.25rem;
+    height: 3.125rem;
+    position: absolute;
+    left: 17.5rem;
+    bottom: 16.875rem;
+}
+.reset {
+    width: 25rem;
+    background-color: var(--primary-strong-cyan);
+    color: black;
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.tipAmountHolder p {
+    color: var(--primary-strong-cyan);
+    font-size: 2.813rem;
+}
+.totalAmountHolder p {
+    color: var(--primary-strong-cyan);
+    font-size: 2.813rem;
+}
+/* END OF START OF CALCULATED AMOUNT HOLDER CODE*/
+
+/* TIP CALCULATOR BUTTON HOLDER */
+.claculatorTipButtonHolder {
+    width: 25rem;
+    height: 31.25rem;
+    display: inline-block;
+    margin-left: 3.125rem;
+    margin-top: 1.25rem;
+}
+.amountHolder {
+    -webkit-appearance: none;  
+    background-image: url("images/icon-dollar.svg"); 
+    background-repeat: no-repeat;
+    margin: 5;
+    font-family: var(--font-family);
+    font-weight: var(--default-font-weight);
+    font-size: var(--default-font-size);
+    background-size: 0.75rem;
+    text-align: right;
+    margin-right: -0.625rem;
+    background-position-x: 0.313rem;
+    background-position-y: 0.625rem;
+    height: 1.875rem;
+    padding: 0.313rem;
+    border: 0 white;
+    border-radius: 0.313rem;
+    background-color: var(--light-grayish-cyan);
+}
+.peopleHolder {
+    -webkit-appearance: none;  
+    background-image: url("images/icon-person.svg"); 
+    background-repeat: no-repeat;
+    margin: 5;
+    font-family: var(--font-family);
+    font-weight: var(--default-font-weight);
+    font-size: var(--default-font-size);
+    background-size: 0.75rem;
+    text-align: right;
+    margin-right: -0.625rem;
+    background-position-x: 0.313rem;
+    background-position-y: 0.625rem;
+    height: 1.875rem;
+    padding: 0.313rem;
+    border: 0 white;
+    border-radius: 0.313rem;
+    background-color: var(--light-grayish-cyan);
+}
+button {
+    background-color: var(--very-dark-cyan);
+    color: var(--color-white);
+    padding: 0.93rem;
+    border-radius: 0.313rem;
+    font-size: 1.25rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    width: 6.25rem;
+    margin: 0.938rem 0 0.313rem 0.313rem;
+}
+
+button:hover {
+    background-color: var(--primary-strong-cyan);
+}
+
+.custom {
+    background-color: var(--very-light-grayish-cyan);
+    padding: 0.938rem;
+    border-radius: 0.313rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    width: 4.375rem;
+    margin: 0.938rem 0 0.313rem 0.313rem;
+}
+::placeholder {
+    color: var(--very-dark-cyan);
+    opacity: 1; 
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* END OF TIP CALCULATOR BUTTON HOLDER */
+/* END OF TIP CALCULATOR CODE */
